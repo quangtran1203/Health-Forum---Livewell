@@ -14,7 +14,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import UploadIcon from "@mui/icons-material/Upload";
 import styles from "./Messages.module.css";
 import React, { useState } from "react";
-import { db } from "@/pages/firebase/config";
+import { db } from "@/firebase/config";
 import {
   collection,
   addDoc,

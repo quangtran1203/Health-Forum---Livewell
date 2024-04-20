@@ -1,6 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { collection, addDoc } from "firebase/firestore";
-import { auth, db, createUserWithEmailAndPassword } from "../firebase/config";
+import {
+  auth,
+  db,
+  createUserWithEmailAndPassword,
+} from "../../firebase/config";
 
 export default async function handler(
   req: NextApiRequest,

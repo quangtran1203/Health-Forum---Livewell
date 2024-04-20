@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./SignIn.module.css";
 import { Button, Link, TextField, Typography } from "@mui/material";
 import MedicalInformationIcon from "@mui/icons-material/MedicalInformation";
-import { auth, signInWithEmailAndPassword } from "../firebase/config";
+import { auth, signInWithEmailAndPassword } from "../../firebase/config";
 import { useRouter } from "next/router";
 
 const SignUp = () => {
