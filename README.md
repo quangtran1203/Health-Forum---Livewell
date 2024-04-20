@@ -6,6 +6,8 @@ Run `npm install` to install all required dependencies.
 
 Then run `npm run dev` to start the development environment. The app can be accessed at `http://localhost:3000`.
 
+Production app: https://health-forum-livewell.vercel.app/
+
 ## Data Models and Technologies used
 
 Framework: Next.js with TypeScript
