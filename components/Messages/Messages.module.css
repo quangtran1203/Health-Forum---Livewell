@@ -1,0 +1,74 @@
+.messagesViewWapper {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    overflow-y: auto;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 82dvh;
+    overflow-y: auto;
+    gap: 18px;
+    color: black;
+    width: 100%;
+}
+
+.threadTopic {
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.messageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 8px;
+    border: 1px dashed black;
+}
+
+.myMessages {
+    border: 2px dashed #1976d2;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    position: relative;
+}
+
+.imgGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.errorAlert {
+    position: absolute;
+    right: 64px;
+    bottom: 57px;
+}
+
+.attachedImgsNotify {
+    position: absolute;
+    bottom: 62px;
+    left: 2px;
+}

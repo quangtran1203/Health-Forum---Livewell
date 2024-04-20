@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 24px;
+}
+
+.forumHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.threads {
+    flex: 0.33;
+}
+
+.chats {
+    flex: 0.67;
+    background-color: white;
+}
+
+.modalBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-top: 30px;
+}

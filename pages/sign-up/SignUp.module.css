@@ -1,0 +1,30 @@
+.signup_wrapper {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.signup_form {
+    padding: 16px;
+    width: 33%;
+    border: 2px solid dimgray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.signup_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.signup_radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
