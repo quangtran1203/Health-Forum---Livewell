@@ -1,40 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting started
 
-## Getting Started
+After pulling the project to your local machine, navigate to the `Health-Forum---Livewell` folder which contains all dev files.
 
-First, run the development server:
+Run `npm install` to install all required dependencies.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then run `npm run dev` to start the development environment. The app can be accessed at `http://localhost:3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Data Models and Technologies used
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Framework: Next.js with TypeScript
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+UI components and color palettes: Material UI
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Authentication: Firebase authentication
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Cloud storage for images: Cloudinary
 
-## Learn More
+Database: Cloud Firestore (NoSQL)
 
-To learn more about Next.js, take a look at the following resources:
+### Data models
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2 collections: `users` and `threads`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`users` collection stores users' credentials in the form of documents. Each document is represented by a unique id and has the following fields:
 
-## Deploy on Vercel
+`email: {user's email}` and `role: {patient or doctor}`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`threads` collection stores details of threads and the users who create them. `threads` has the fields:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`createdBy: {user's email}`
+
+`createdByRole: {user's role}`
+
+`threadID: {unique id of each thread}`
+
+`topic: {the topic of a thread that the user creates}`
+
+In each document of a thread contains a sub-collection named `messages` that stores all messages pertaining to that specific thread.
+
+Fields of `messages`:
+
+`createdAt: {timestamp of a thread when it's created}`
+
+`image: {array of strings representing the URLs of images that were uploaded to Cloudinary}`
+
+`role: {role of user who sends this message}`
+
+`sender: {email of the user who sends this message}`
+
+`text: {text content of the message besides the images}`
+
+This sub-collection `messages` in each `threads` document makes it easy to query and update the list of messages pertaining to a thread.
