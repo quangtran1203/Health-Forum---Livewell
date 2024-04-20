@@ -180,6 +180,7 @@ const Messages = ({
       <div className={styles.messages}>
         {messages.map((message) => (
           <div
+            key={message.text}
             className={`${styles.messageContent} ${
               message.sender === userEmail && styles.myMessages
             }`}

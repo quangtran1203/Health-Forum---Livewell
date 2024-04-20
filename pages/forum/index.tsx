@@ -106,7 +106,7 @@ const Forum = () => {
       setUserEmail(userSession as string);
       queryRoleByEmail(userSession as string);
     }
-  }, [user]);
+  }, [user, router]);
 
   const [threads, setThreads] = useState<any[]>([]);
   const [selectedThreadTopic, setSelectedThreadTopic] = useState("");
